@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="670.0" prefWidth="875.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Accordion layoutX="-38.0" layoutY="-180.0" />
+      <BorderPane layoutX="41.0" prefHeight="700.0" prefWidth="900.0">
+         <top>
+            <HBox prefHeight="64.0" prefWidth="433.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="64.0" prefWidth="179.0" text="time" />
+                  <Label prefHeight="64.0" prefWidth="178.0" text="running PID" />
+                  <Label prefHeight="64.0" prefWidth="164.0" text="time slide" />
+                  <VBox prefHeight="64.0" prefWidth="300.0">
+                     <children>
+                        <Label prefHeight="35.0" prefWidth="325.0" text="command" />
+                        <TextField prefHeight="30.0" prefWidth="284.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="249.0" prefWidth="981.0" BorderPane.alignment="CENTER">
+               <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="216.0" prefWidth="0.0" />
+                  <TitledPane animated="false" prefHeight="182.0" prefWidth="241.0" text="Using Devices">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="193.0" prefWidth="239.0" />
+                    </content>
+                  </TitledPane>
+                  <VBox prefHeight="355.0" prefWidth="557.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Result" textAlignment="CENTER" wrappingWidth="78.826171875">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Text>
+                        <HBox prefHeight="207.0" prefWidth="616.0">
+                           <children>
+                              <TitledPane animated="false" prefHeight="160.0" prefWidth="307.0" text="intermediate result">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="149.0" prefWidth="305.0" />
+                                 </content>
+                              </TitledPane>
+                              <TitledPane animated="false" prefHeight="160.0" prefWidth="290.0" text="final result">
+                                 <content>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="55.0" prefWidth="267.0" />
+                                 </content>
+                              </TitledPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </bottom>
+         <left>
+            <VBox prefHeight="342.0" prefWidth="243.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TitledPane animated="false" text="Ready PID">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="120.0" prefWidth="241.0" />
+                    </content>
+                  </TitledPane>
+                  <Label prefHeight="20.0" prefWidth="127.0" text="Running Instruction" />
+                  <Label prefHeight="48.0" prefWidth="243.0" text="Label" />
+                  <TitledPane animated="false" prefHeight="186.0" prefWidth="243.0" text="Busy PID">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                  </TitledPane>
+               </children>
+            </VBox>
+         </left>
+         <center>
+            <Pane prefHeight="387.0" prefWidth="593.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="Main Memory" />
+                  <PieChart layoutX="50.0" layoutY="190.0" prefHeight="110.0" prefWidth="157.0" />
+                  <Label layoutX="14.0" layoutY="197.0" prefHeight="20.0" prefWidth="71.0" text="Disk" />
+                  <LineChart layoutY="33.0" prefHeight="164.0" prefWidth="255.0">
+                    <xAxis>
+                      <CategoryAxis side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis prefHeight="102.0" prefWidth="30.0" side="LEFT" />
+                    </yAxis>
+                  </LineChart>
+                  <TreeView layoutX="276.0" layoutY="43.0" prefHeight="320.0" prefWidth="300.0" />
+                  <Label layoutX="274.0" layoutY="14.0" prefHeight="20.0" prefWidth="77.0" text="Directory" />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
